@@ -1,0 +1,9 @@
+language: go
+go:
+  - tip
+install:
+  - go install .
+  - go get github.com/njuettner/go-translator
+script:
+  - export PATH="$PATH:$HOME/gopath/bin"
+
