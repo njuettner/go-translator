@@ -8,6 +8,8 @@ import (
 	"regexp"
 )
 
+// translate is looking for translation
+// its using dict.cc
 func translate(word string) {
 	doc, err := goquery.NewDocument(fmt.Sprintf("http://dict.cc/?s=%s", word))
 	if err != nil {
