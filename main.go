@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
-	"log"
 	"os"
 	"regexp"
 )
@@ -13,7 +12,8 @@ import (
 func translate(word string) {
 	doc, err := goquery.NewDocument(fmt.Sprintf("http://dict.cc/?s=%s", word))
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("%s", err)
+		os.Exit(1)
 	}
 	re := regexp.MustCompile("\\d")
 
@@ -27,5 +27,9 @@ func translate(word string) {
 }
 
 func main() {
+	if len(os.Args) != 2 {
+		fmt.Printf("Need a word to translate, like ./go-translator hello")
+		os.Exit(1)
+	}
 	translate(os.Args[1])
 }
