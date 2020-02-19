@@ -3,26 +3,14 @@
 
 ## Installation
 
-* clone the repository
-
-```
-git clone ...
-```
-
-* get dependencies
-```
-go get github.com/PuerkitoBio/goquery
-```
-
-* install it
-```
-go install .
+```console
+make install
 ```
 
 ## How to use it
 
-```
-go-translator news
+```console
+$ go-translator news
 news {sg} - Nachrichten {pl}
 news {sg} - Neuigkeiten {pl}
 news - Nachricht {f}
