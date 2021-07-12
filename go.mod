@@ -2,4 +2,4 @@ module github.com/njuettner/go-translator
 
 go 1.13
 
-require github.com/PuerkitoBio/goquery v1.7.0
+require github.com/PuerkitoBio/goquery v1.7.1
